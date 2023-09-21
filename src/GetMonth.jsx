@@ -10,7 +10,7 @@ function GetMonth(data) {
     if(firstDayOfMonth.format('d') !== '1') {
         let currentDay = moment(firstDayOfMonth);
         do {
-            currentDay = currentDay.subtract(1, 'days');
+            currentDay.subtract(1, 'days');
         } while (currentDay.format('d') !== '0');        
         firstDay = currentDay;        
     }
